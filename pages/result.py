@@ -2,8 +2,13 @@
 Este módulo contiene DuckDuckGoResultPage,
 la vista encargada de representar la página de resultados de búsqueda de DuckDuckGo
 """
+from selenium.webdriver.common.by import By
+
 
 class DuckDuckGoResultPage():
+
+    RESULT_LINKS = (By.CSS_SELECTOR, 'a.result__a')
+    SEARCH_INPUT = (By.ID, 'search_form_input')
 
     def __init__(self, browser):
         self.browser = browser
@@ -17,5 +22,5 @@ class DuckDuckGoResultPage():
         return ""
 
     def title(self):
-        # TODO
+    # TODO
         return ""
